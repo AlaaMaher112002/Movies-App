@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="imgDetail">
+      <img [src]="ImgBaseUrl+movieDetail.poster_path" class="img-fluid w-100 h-100 my-3">
+    </div>
+
+  </div>
+  <div class="col-md-7">
+    <h1 class="fw-bold my-4 test"> {{movieDetail.title}}</h1>
+    <h3>Status : {{movieDetail.status}}</h3>
+    <h3>Media Type : {{movieDetail.media_type}}</h3>
+     <h3>Release Date: {{movieDetail.release_date}}</h3>
+    <p class="py-4">{{movieDetail.overview}}</p>
+    <ul>
+      <li><span class="test fw-bold fs-5">Popularity:</span> {{movieDetail.popularity}}</li>
+      <li> <span class="test fw-bold fs-5">Vote Count :</span> {{movieDetail.vote_count}}</li>
+      <li> <span class="test fw-bold fs-5">Vote :</span> {{movieDetail.vote_average}}</li>
+    </ul>
+    <a href="{{movieDetail.homepage}}" target="_blank" class=""><div class=" px-3 py-2 testbtn">Watch It</div></a>
+  </div>
+</div>

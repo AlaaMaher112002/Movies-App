@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import 'ngx-toastr/toastr';
+
+body{
+  background-color: #131722;
+  color:#fff ;
+  font-family:  'Lobster', cursive !important;
+
+}
+
+a,a:hover{
+  color: #fff !important;
+}
+
+.item{
+  transition: all 1s;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.member{
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.vote{
+  position:absolute ;
+  z-index: 999999999;
+  top: 0px;
+  background-color: rgba(245, 64, 94,0.4);
+  padding-top: 2px;
+  right: 0;
+  border-radius: 5px;
+}

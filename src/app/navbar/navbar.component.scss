@@ -1,0 +1,18 @@
+.navbar
+{
+  background-color: rgba(4, 43, 65, 0.6);
+}
+
+.test
+{
+  background-color: pink;
+  color: rgba(4, 43, 65, 0.6);
+  border-radius: 5px;
+}
+
+.socialIcons i{
+transition: all 1s;
+}
+.socialIcons i:hover{
+  color: palevioletred;
+}

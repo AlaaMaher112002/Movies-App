@@ -1,0 +1,29 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-fade" [fullScreen] = "true"></ngx-spinner>
+
+
+<div class="loginForm my-5 w-75 m-auto">
+  <h3>Login Form</h3>
+  <form [formGroup]="loginForm"  (ngSubmit)="formSubmit()">
+
+    <div class="inputGroup">
+      <label>Email:</label>
+      <input class="form-control my-1" formControlName="email" type="text">
+      <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="text-danger">
+        <p *ngIf="loginForm.get('email')?.getError('required')">Email Required</p>
+        <p *ngIf="loginForm.get('email')?.getError('email')">Email should be Valid</p>
+      </div>
+    </div>
+    <div class="inputGroup">
+      <label>Passward:</label>
+      <input class="form-control my-1" formControlName="password" type="password">
+      <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="text-danger">
+        <p *ngIf="loginForm.get('password')?.getError('required')">Passward Required</p>
+        <p *ngIf="loginForm.get('password')?.getError('pattern')">Passward should start with letters then some numbers </p>
+      </div>
+    </div>
+
+  <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
+</div>
